@@ -8,7 +8,7 @@ export default function ShoppingForm({ addItem }: ShoppingPROS): JSX.Element {
   const inputRef = useRef<HTMLInputElement>(null);
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    addItem(inputRef.current?.value);
+    addItem(inputRef.current!.value);
   }
   return (
     <form onSubmit={handleSubmit}>
